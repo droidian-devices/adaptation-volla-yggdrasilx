@@ -1,0 +1,23 @@
+Source: adaptation-volla-yggdrasilx
+Maintainer: Erik Inkinen <erik.inkinen@erikinkinen.fi>
+Section: metapackages
+Priority: optional
+Build-Depends: debhelper (>= 10)
+Standards-Version: 4.5.0.3
+Vcs-Browser: https://github.com/droidian/adaptation-volla-yggdrasilx
+Vcs-Git: https://github.com/hybris-mobian-releng/adaptation-volla-yggdrasilx.git
+
+Package: adaptation-volla-yggdrasilx
+Architecture: all
+Depends: ${misc:Depends},
+         linux-bootimage-volla-yggdrasilx,
+         adaptation-hybris-api29-phone,
+         adaptation-volla-yggdrasilx-configs,
+Description: adapatation-volla-yggdrasilx - meta
+ Volla Phone X api29 adaptation metapackage
+
+Package: adaptation-volla-yggdrasilx-configs
+Architecture: all
+Depends: ${misc:Depends},
+         adaptation-volla-yggdrasilx (= ${binary:Version}),
+Description: Volla Phone X's specific adaptation configs
