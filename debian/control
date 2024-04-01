@@ -13,6 +13,7 @@ Depends: ${misc:Depends},
          linux-bootimage-volla-yggdrasilx,
          adaptation-hybris-api29-phone,
          adaptation-volla-yggdrasilx-configs,
+         droidian-quirks-full-resize,
 Description: adapatation-volla-yggdrasilx - meta
  Volla Phone X api29 adaptation metapackage
 
