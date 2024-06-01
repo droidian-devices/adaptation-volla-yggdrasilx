@@ -1,8 +1,4 @@
 #!/bin/sh
 
-while [ "$(/usr/bin/getprop vendor.service.nvram_init)" != "Ready" ]; do
-    sleep 1
-done
-
-hexdump -s 0 -n 6 -ve '/1 "%02X:"' /vendor/nvdata/APCFG/APRDEB/BT_Addr | sed "s/:$//g" > /var/lib/bluetooth/board-address
-
+cd /var/lib/bluetooth
+find . -mindepth 1 -maxdepth 1 -type d | cut -c3- | awk -F: -vOFS=: '{print $6,$5,$4,$3,$2,$1}' > /var/lib/bluetooth/board-address
